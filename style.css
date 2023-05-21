@@ -1,0 +1,21 @@
+.navbar {
+    border: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-family: Charter,monospace;
+    padding-right: 4%;
+
+}
+
+.navbar a:hover {
+    text-decoration: underline black;
+}
