@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Toxicity</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+</head>
+<body>
+<div id="application">
+    <div id="panel1">
+        <div id="ctn1">
+            <div class="panel-intro">
+                <div id="title-background"><h1>Lyrical Toxicity</h1></div>
+                <h3>Discover the impact of your music with our unique web application designed to explore the toxicity levels in songs, albums, and artists.</h3>
+            </div>
+            <form id="myForm">
+                <select name="dropdown" id="dropdown">
+                    <option value="songSentiment">Song Toxicity Analysis</option>
+                    <option value="albumSentiment">Album Toxicity Analysis</option>
+                    <option value="artistSentiment">Artist Toxicity Analysis</option>
+                </select>
+            </form>
+            <button id="nextButton">Next Section</button>
+
+        </div>
+    </div>
+    <div id="panel2">
+        <div id="ctn2">
+            <div class="panel-intro">
+              <h3>Enter a song and artist to get started</h3>
+            </div>
+            <div id="inputFields"></div>
+            <button class="button" onclick="lyricalNegativityUI.advanceToPanel3()">Next Section</button>
+        </div>
+    </div>
+    <div id="panel3">
+        <div id="ctn3">
+            <div id="row-flex">
+                <div class="panel-intro">
+
+                </div>
+                <div id="viz-1-ctn"></div>
+                <div id="viz-2-ctn"></div>
+                <div id="viz-3-ctn"></div>
+            </div>
+            <button id="refresh" onclick="lyricalNegativityUI.refreshPage()">Refresh</button>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+<script src="lyricalNegativity-UI.js"></script>
+<script src="lyricalNegativity-Visualizations.js"></script>
+<script src="lyricalNegativity-main.js"></script>
+</body>
+</html>
